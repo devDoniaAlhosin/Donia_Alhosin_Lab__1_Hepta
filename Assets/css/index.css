@@ -606,6 +606,13 @@ span.prev:hover {
   padding: 5rem 0;
   width: 100%;
 }
+.test--container h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Abril Fatface", times, serif;
+  line-height: 2;
+  margin-bottom: 3rem;
+}
 .test--reviews {
   width: 70%;
   margin: auto;
@@ -618,16 +625,17 @@ span.prev:hover {
 }
 .test--user {
   /* background-color: #65c0ba; */
-  width: calc((100% / 3));
+  width: calc((100% / 3) - 1.5);
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
   flex-direction: column;
 }
 .test--user .test--img {
-  width: 40%;
-  height: 40%;
+  width: 20%;
+  height: 20%;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -640,6 +648,7 @@ span.prev:hover {
 .test--content p {
   line-height: 1.5;
   font-family: "Mukta Mahee", arial, sans-serif;
+  font-weight: 100;
   font-size: 20px;
   color: #000;
   font-style: italic;
@@ -738,39 +747,46 @@ footer {
   margin: auto;
   width: 100%;
   padding: 6rem;
-  background-color: #000;
+  background-color: #1a1a1a;
 }
 footer .footer--container {
-  width: 70%;
+  width: 80%;
   margin: auto;
   /* background-color: #65c0ba; */
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1.5rem;
+  justify-content: space-between;
+  gap: 1.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 3rem;
 }
 .footer--content {
-  width: calc((100% / 3) - 1.5rem);
+  width: calc((100% / 3) - 1.75rem);
   height: 100%;
   /* background-color: #ccc; */
-
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
 }
-
+.footer--content h3 {
+  color: #ffff;
+  font-weight: 300;
+}
 .footer--link {
   margin-bottom: 1rem;
 }
-.footer--link li {
+.footer--link li a {
+  cursor: pointer;
   font-family: "Mukta Mahee", arial, sans-serif;
   font-weight: 200;
   font-size: 18px;
   line-height: 2;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.5s all ease-in-out;
+}
+.footer--link li a:hover {
   color: #fff;
 }
 .footer--content p {
@@ -800,7 +816,7 @@ footer .footer--container {
   font-weight: 200;
   font-size: 18px;
   line-height: 1.8;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
 }
 .footer--subscribe input {
   width: 100%;
@@ -809,8 +825,12 @@ footer .footer--container {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   width: 100%;
   background-color: transparent;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   transition: 0.5s all ease-in-out;
+}
+.footer--subscribe input::placeholder {
+  font-style: italic;
+  font-weight: 800;
 }
 .footer--subscribe input:focus {
   border-color: #fff;
@@ -872,25 +892,35 @@ footer .footer--container {
 
   .head--content h1 {
     position: absolute;
-    top: 16rem;
-    font-size: 42px;
+    top: 22rem;
+    font-size: 59px;
     width: 100%;
     text-align: center;
   }
+  .head--container {
+    height: 150vh;
+  }
   .head--container .head--content p {
-    top: 20rem;
+    top: 26rem;
     left: 50%;
-    font-size: 19px;
+    font-size: 26px;
     width: 100%;
     text-align: center;
   }
   .head--container .head--content button {
-    top: 27rem;
-    width: 13rem;
+    top: 36rem;
+    width: 31rem;
     padding: 1.23rem;
-    border-radius: 6px;
-    font-size: 15px;
+    font-size: 21px;
   }
+  .head--container .head--content .head--scroll-down {
+    top: 59rem;
+  }
+  .head--container .head--content .head--scroll-down i {
+    font-size: 49px;
+  }
+
+  /* Welcome  */
   .welc--container {
     width: 90%;
   }
