@@ -625,7 +625,7 @@ span.prev:hover {
 }
 .test--user {
   /* background-color: #65c0ba; */
-  width: calc((100% / 3) - 1.5);
+  width: calc((100% / 3) - 1.5rem);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -707,7 +707,7 @@ span.prev:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: calc((100 / 4) - 1rem);
+  width: calc((100% / 4) - 1rem);
   padding: 2rem 0;
   /* background-color: green; */
 }
@@ -882,7 +882,86 @@ footer .footer--container {
 /*########################################## Media Quary ################################################# */
 
 /* Tablet */
-@media (max-width: 767px) {
+@media (max-width: 967px) {
+  .head--content h1 {
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+  }
+  .head--container .head--content p {
+    position: absolute;
+    top: 22rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+
+  /* Welc Start  */
+  .welc--container {
+    width: 90%;
+  }
+  /* Welc End  */
+  /* Expo start  */
+  .exp--container {
+    width: 90%;
+  }
+  .exp--container .exp--contents .exp--data {
+    width: calc((100% / 2) - 1rem);
+  }
+  /* Expo End  */
+  /* Start Tour */
+  .tour--container {
+    margin: auto;
+    width: 100%;
+    padding: 0rem;
+  }
+  .tour--container .tour--text {
+    width: 90%;
+  }
+  /* EndTour */
+  /* Start Blogs  */
+  .blogs--container {
+    margin: auto;
+    width: 90%;
+  }
+  .blogs--content {
+    /* background-color: green; */
+    text-align: center;
+    width: 90%;
+  }
+  .blogs--posts {
+    flex-wrap: wrap;
+  }
+  .blogs--posts .blog--post {
+    background-color: #fff;
+    width: calc((100% / 2) - 1rem);
+  }
+  /* End Blogs  */
+  /* start test.  */
+  .test--reviews {
+    width: 90%;
+  }
+  /* End test */
+  /* start Top content */
+  .top--container {
+    .top--content {
+      flex-wrap: wrap;
+      p {
+        text-align: center;
+      }
+      .top--places {
+        .top--place {
+          width: calc((100% / 2) - 1rem);
+        }
+      }
+    }
+  }
+  .top--container .top--content .top--place {
+    width: 50%;
+  }
+  /* End Top Content  */
 }
 /* Mobile */
 @media (max-width: 575px) {
@@ -893,7 +972,7 @@ footer .footer--container {
   .head--content h1 {
     position: absolute;
     top: 22rem;
-    font-size: 59px;
+    font-size: 49px;
     width: 100%;
     text-align: center;
   }
@@ -901,7 +980,7 @@ footer .footer--container {
     height: 150vh;
   }
   .head--container .head--content p {
-    top: 26rem;
+    top: 29rem;
     left: 50%;
     font-size: 26px;
     width: 100%;
@@ -909,12 +988,12 @@ footer .footer--container {
   }
   .head--container .head--content button {
     top: 36rem;
-    width: 31rem;
-    padding: 1.23rem;
-    font-size: 21px;
+    width: 16rem;
+    padding: 1rem 1rem;
+    font-size: 18px;
   }
   .head--container .head--content .head--scroll-down {
-    top: 59rem;
+    top: 56rem;
   }
   .head--container .head--content .head--scroll-down i {
     font-size: 49px;
@@ -934,11 +1013,100 @@ footer .footer--container {
     width: 100%;
     height: 100%;
   }
+  /* Start Expo  */
   .exp--container {
     width: 90%;
     margin: 6rem auto;
   }
+  .exp--container .exp--contents .exp--data {
+    width: 100%;
+  }
   .exp--container .exp--head {
     width: 90%;
+  }
+  /* Expo End  */
+  /* Tour start */
+  .tour--container .tour--text h2 {
+    font-size: 40px;
+  }
+  /* Tour end  */
+  /* Start Blogs  */
+  .blogs--container {
+    margin: auto;
+    width: 90%;
+  }
+  .blogs--content {
+    /* background-color: green; */
+    text-align: center;
+    width: 90%;
+    h2 {
+      font-size: 40px;
+    }
+  }
+  .blogs--posts {
+    flex-wrap: wrap;
+  }
+  .blogs--posts .blog--post {
+    background-color: #fff;
+    width: 100%;
+  }
+  /* End Blogs  */
+  /* start test.  */
+  .test--container {
+    h2 {
+      font-size: 40px;
+    }
+    .test--reviews {
+      width: 90%;
+      flex-direction: column;
+      .test--user {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-direction: column;
+      }
+    }
+  }
+  /* End test */
+  /* Start Top  */
+  .top--container {
+    .top--content {
+      width: 90%;
+      flex-wrap: wrap;
+      p {
+        text-align: center;
+      }
+      .top--places {
+        flex-direction: column;
+        .top--place {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .top--container .top--content .top--place {
+    width: 50%;
+  }
+  .top--content p {
+    text-align: center;
+    width: 100%;
+  }
+  /* End Top  */
+  /* Footer */
+  footer {
+    padding: 6rem 0;
+  }
+  footer .footer--container {
+    width: 90%;
+    flex-direction: column;
+    .footer--content {
+      width: 100%;
+    }
+  }
+  .footer--social {
+    width: 90%;
+    padding: 0;
   }
 }
